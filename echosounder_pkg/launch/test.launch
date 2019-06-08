@@ -1,0 +1,20 @@
+<launch>  
+  
+  <!-- Spawn the primary driver node : serial port ttyS1 -->
+  <node name="driver1" pkg="echosounder_pkg" type="driver" output="screen">
+	   <param name="driver_name" value="driver1"/>
+	   <param name="serial_port" value="/dev/ttyACM0"/>
+  </node>
+
+   <!-- Spawn the secondary driver node : serial port ttyS3 -->
+  <node name="driver2" pkg="echosounder_pkg" type="driver" output="screen">
+	   <param name="driver_name" value="driver2"/>
+	   <param name="serial_port" value="/dev/ttyACM1"/>
+  </node>
+
+  <!-- Spawn the handler node : angle between two echosounders is equal to 25° -->
+  <node name="handler" pkg="echosounder_pkg" type="handler" output="screen">
+	   <param name="theta" value="25"/>
+  </node>
+
+</launch>

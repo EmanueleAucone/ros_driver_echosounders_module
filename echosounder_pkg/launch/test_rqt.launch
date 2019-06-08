@@ -1,0 +1,6 @@
+<launch>
+
+   <!-- Spawn the rqt GUI node : EchoSounders.perspective is the configuration of the GUI -->
+   <node name = "my_rqt_dashboard" pkg = "rqt_gui" type = "rqt_gui" respawn = "false" output = "screen" args = "--perspective-file $(find echosounder_pkg)/rqt_config/EchoSounders.perspective"/>
+
+</launch>

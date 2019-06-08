@@ -1,0 +1,9 @@
+string echo1
+string mode1
+int32 N1
+float32 K1
+string echo2
+string mode2
+int32 N2
+float32 K2
+bool repeat
